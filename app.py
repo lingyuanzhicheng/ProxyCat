@@ -607,7 +607,7 @@ def run_proxy_server():
 if __name__ == '__main__':
     setup_logging()
     web_port = int(config.get('web_port', '5000'))
-    web_url = f"http://127.0.0.1:{web_port}"
+    web_url = f"http://0.0.0.0:{web_port}"
     if config.get('token'):
         web_url += f"/web?token={config.get('token')}"
     
